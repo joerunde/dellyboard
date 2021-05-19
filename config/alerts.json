@@ -1,0 +1,27 @@
+{
+  "Magic Shield": {
+    "timeout_s": 180,
+    "sound": "Yell.wav",
+    "hotkey": "x"
+  },
+  "Magic Shield!!": {
+    "timeout_s": 195,
+    "sound": "eas.mp3",
+    "hotkey": "x"
+  },
+  "Enchant Party": {
+    "timeout_s": 110,
+    "sound": "Jsquad.wav",
+    "hotkey": "2"
+  },
+  "UE is off cooldown": {
+    "timeout_s": 40,
+    "sound": "bleep.wav",
+    "hotkey": "<f12>"
+  },
+  "Get hyped because my boy just used a UH": {
+    "timeout_s": 2,
+    "sound": "smoke.wav",
+    "hotkey": "<shift>+q"
+  }
+}

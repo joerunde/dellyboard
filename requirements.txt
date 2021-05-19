@@ -1,0 +1,2 @@
+pynput~=1.6.8
+playsound~=1.2.2
