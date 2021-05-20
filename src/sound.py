@@ -1,4 +1,6 @@
+import ctypes
 import os
+import threading
 from sys import platform
 
 from playsound import playsound
@@ -20,15 +22,12 @@ class Sound(object):
         return self._sound_file
 
     def play(self):
+        _playthread = threading.Thread(target=self._play)
+        _playthread.start()
+
+    def _play(self):
         if platform.startswith('linux'):
             os.system('aplay {}'.format(self.sound_file))
             pass
         else:
             playsound(self.sound_file)
-
-    # def _play(self):
-    #     if platform.startswith('linux'):
-    #         os.system('aplay {}'.format(self.sound_file))
-    #         pass
-    #     else:
-    #         playsound(self.sound_file)

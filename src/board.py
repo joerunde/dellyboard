@@ -58,8 +58,6 @@ class Board:
         # swallowed
         notify_dict["<ctrl>+c"] = sys.exit
 
-        notify_dict["<ctrl>+6"]()
-
         print(notify_dict)
         with keyboard.GlobalHotKeys(notify_dict) as hotkey_listener:
             hotkey_listener.join()

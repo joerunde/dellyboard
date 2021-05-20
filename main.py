@@ -24,19 +24,5 @@ if __name__ == "__main__":
                       for hkey, sound_file in profile["sounds"].items()]
             profiles.append(Profile(name, hotkey, sounds))
 
-        xmap = {}
-        for x in range(100):
-            def xprinter(x):
-                def _print():
-                    print(x)
-                return _print
-            xmap[x] = xprinter(x)
-
-        xmap[10]()
-
-        xmap[20]()
-
-
-
         board = Board(profiles)
         board.run()
