@@ -25,3 +25,10 @@ class Sound(object):
             pass
         else:
             playsound(self.sound_file)
+
+    # def _play(self):
+    #     if platform.startswith('linux'):
+    #         os.system('aplay {}'.format(self.sound_file))
+    #         pass
+    #     else:
+    #         playsound(self.sound_file)
