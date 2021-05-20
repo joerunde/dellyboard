@@ -25,3 +25,14 @@
     "hotkey": "<shift>+q"
   }
 }
+
+
+{
+  "arnold": {
+    "hotkey": "<ctrl>+1",
+    "sounds": {
+      "1": "chopper.wav",
+      "2":
+    }
+  }
+}
