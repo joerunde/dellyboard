@@ -9,7 +9,7 @@ from src.sound import Sound
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Delly Soundboard (for yelling at cyclists)')
-    parser.add_argument('-c', '--config', default='config/alerts.json')
+    parser.add_argument('-c', '--config', default='config/sounds.json')
     parser.add_argument('-s', '--sounds', default='sounds')
 
     args = parser.parse_args()
