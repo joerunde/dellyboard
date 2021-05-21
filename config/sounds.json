@@ -1,6 +1,17 @@
 {
+  "horns": {
+   "hotkey": "<enter>+1",
+   "sounds": {
+       "1": "TrainHornSoundEffect.wav",
+       "2": "WoodTrainWhistle.wav",
+       "3": "WoopWoopSoundPolice.wav",
+       "4": "WooWooWhistle.wav",
+       "5": "Cucaracha.wav",
+       "6": "DukesHorn.wav"
+     }
+   },
   "bikes": {
-    "hotkey": "<enter>+1",
+    "hotkey": "<enter>+3",
     "sounds": {
       "1": "FinalDrive.wav",
       "2": "LegsOverTop.wav",
@@ -15,7 +26,10 @@
       "3": "Jsquad.wav",
       "4": "SonArrested.wav",
       "5": "Van.wav",
-      "6": "Yell.wav"
+      "6": "Yell.wav",
+      "7": "Queeblo.wav",
+      "8": "YeezyTaughtMe.wav",
+      "9": "NBAonNBC.wav"
     }
-  }
+  } 
 }
