@@ -1,15 +1,15 @@
 {
   "horns": {
-   "hotkey": "<enter>+1",
-   "sounds": {
-       "1": "TrainHornSoundEffect.wav",
-       "2": "WoodTrainWhistle.wav",
-       "3": "WoopWoopSoundPolice.wav",
-       "4": "WooWooWhistle.wav",
-       "5": "Cucaracha.wav",
-       "6": "DukesHorn.wav"
-     }
-   },
+    "hotkey": "<enter>+1",
+    "sounds": {
+      "1": "TrainHornSoundEffect.wav",
+      "2": "WoodTrainWhistle.wav",
+      "3": "WoopWoopSoundPolice.wav",
+      "4": "WooWooWhistle.wav",
+      "5": "Cucaracha.wav",
+      "6": "DukesHorn.wav"
+    }
+  },
   "bikes": {
     "hotkey": "<enter>+3",
     "sounds": {
@@ -31,5 +31,5 @@
       "8": "YeezyTaughtMe.wav",
       "9": "NBAonNBC.wav"
     }
-  } 
+  }
 }
