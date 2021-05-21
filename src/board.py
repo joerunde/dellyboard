@@ -4,6 +4,7 @@ from typing import List
 from pynput import keyboard
 
 from src.profile import Profile
+from src.sound import Sound
 
 
 class Board:
@@ -23,6 +24,8 @@ class Board:
                 def _swap():
                     print("Swapping to profile:", profile.name)
                     self._current_profile = profile
+                    # Kill any sounds this owuld have made
+                    Sound.terminate_all(force_now=True)
 
                 return _swap
 
