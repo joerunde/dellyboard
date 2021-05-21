@@ -1,6 +1,6 @@
 {
   "bikes": {
-    "hotkey": "<ctrl>+1",
+    "hotkey": "<enter>+1",
     "sounds": {
       "1": "FinalDrive.wav",
       "2": "LegsOverTop.wav",
@@ -8,7 +8,7 @@
     }
   },
   "memes": {
-    "hotkey": "<ctrl>+2",
+    "hotkey": "<enter>+2",
     "sounds": {
       "1": "Foccacia.wav",
       "2": "Hadouken.wav",

@@ -7,7 +7,7 @@ class Play:
     '''Starts playing a sound when initialized. Non-Blocking.
     Playback can be terminated, but will wait a configurable bit of time so it can be nice and smooth'''
 
-
+    min_playback: float
 
     def __init__(self, sound_file):
         self.start_time = time.time()
@@ -19,7 +19,7 @@ class Play:
 
     def _async_terminate(self, old_process):
         '''Kills the old play process asynchronously so that'''
-        min_time = 0.5
+        min_time = self.min_playback
         end_time = min_time + self.start_time
         to_sleep = max(end_time - time.time(), 0.1)
         print("sleeping", to_sleep)
