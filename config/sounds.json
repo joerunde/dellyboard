@@ -1,0 +1,21 @@
+{
+  "bikes": {
+    "hotkey": "<enter>+1",
+    "sounds": {
+      "1": "FinalDrive.wav",
+      "2": "LegsOverTop.wav",
+      "3": "lineforthefinish.wav"
+    }
+  },
+  "memes": {
+    "hotkey": "<enter>+2",
+    "sounds": {
+      "1": "Foccacia.wav",
+      "2": "Hadouken.wav",
+      "3": "Jsquad.wav",
+      "4": "SonArrested.wav",
+      "5": "Van.wav",
+      "6": "Yell.wav"
+    }
+  }
+}
