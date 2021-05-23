@@ -20,17 +20,21 @@ class Player:
 
     def terminate(self, force_now=False):
         if force_now:
+            print("forcing immediate termination")
             self._play_process.terminate()
         else:
             terminate_thread = threading.Thread(target=self._async_terminate, args=[self._play_process])
             terminate_thread.start()
 
     def _async_terminate(self, old_process):
-        '''Kills the old play process asynchronously so that'''
+        '''Kills the old play process asynchronously'''
         min_time = self.min_playback
         end_time = min_time + self.start_time
-        to_sleep = max(end_time - time.time(), 0.1)
-        print("sleeping", to_sleep)
-        time.sleep(to_sleep)
+        to_sleep = end_time - time.time()
+        if to_sleep > 0:
+            print("sleeping", to_sleep)
+            time.sleep(to_sleep)
+        else:
+            print("Not sleeping, terminating now")
 
         old_process.terminate()
