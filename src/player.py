@@ -1,9 +1,10 @@
 import threading
 import time
 from subprocess import Popen
+from sys import platform
 
 
-class Play:
+class Player:
     '''Starts playing a sound when initialized. Non-Blocking.
     Playback can be terminated, but will wait a configurable bit of time so it can be nice and smooth'''
 
@@ -11,14 +12,18 @@ class Play:
 
     def __init__(self, sound_file):
         self.start_time = time.time()
-        self._play_process = Popen(["python3", "-m", "src._sound", sound_file])
+
+        if platform.startswith('linux'):
+            self._play_process = Popen(["aplay", sound_file])
+        else:
+            self._play_process = Popen(["python3", "-m", "src._play_mac_windows", sound_file])
 
     def terminate(self, force_now=False):
         if force_now:
             self._play_process.terminate()
         else:
-            go_dumb_shit = threading.Thread(target=self._async_terminate, args=[self._play_process])
-            go_dumb_shit.start()
+            terminate_thread = threading.Thread(target=self._async_terminate, args=[self._play_process])
+            terminate_thread.start()
 
     def _async_terminate(self, old_process):
         '''Kills the old play process asynchronously so that'''

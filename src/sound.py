@@ -1,4 +1,4 @@
-from src.play import Play
+from src.player import Player
 
 
 class Sound(object):
@@ -29,5 +29,5 @@ class Sound(object):
     def play(self):
         Sound.terminate_all()
 
-        player = Play(self.sound_file)
+        player = Player(self.sound_file)
         self._playing_list.append(player)

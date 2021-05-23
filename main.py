@@ -3,7 +3,7 @@ import json
 import os
 
 from src.board import Board
-from src.play import Play
+from src.player import Player
 from src.profile import Profile
 from src.sound import Sound
 
@@ -16,7 +16,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     with open('config/config.json') as cfg_file:
-        Play.min_playback = json.load(cfg_file)['min_playback_seconds']
+        Player.min_playback = json.load(cfg_file)['min_playback_seconds']
 
     with open(args.config) as alert_file:
         profile_config = json.load(alert_file)
