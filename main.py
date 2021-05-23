@@ -29,4 +29,10 @@ if __name__ == "__main__":
             profiles.append(Profile(name, hotkey, sounds))
 
         board = Board(profiles)
-        board.run()
+
+        while True:
+            try:
+                board.run()
+            except Exception as e:
+                print(e)
+                print("restarting")
