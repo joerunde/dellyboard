@@ -21,7 +21,7 @@ class Player:
     def terminate(self, force_now=False):
         if force_now:
             print("forcing immediate termination")
-            self._play_process.terminate()
+            self._play_process.kill()
         else:
             terminate_thread = threading.Thread(target=self._async_terminate, args=[self._play_process])
             terminate_thread.start()
@@ -37,4 +37,4 @@ class Player:
         else:
             print("Not sleeping, terminating now")
 
-        old_process.terminate()
+        old_process.kill()
