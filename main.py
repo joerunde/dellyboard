@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+from sys import platform
 
 from src.board import Board
 from src.player import Player
@@ -16,7 +17,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     with open('config/config.json') as cfg_file:
-        Player.min_playback = json.load(cfg_file)['min_playback_seconds']
+        if platform.startswith("linux"):
+            Player.min_playback = json.load(cfg_file)['min_playback_seconds']['linux']
+        else:
+            Player.min_playback = json.load(cfg_file)['min_playback_seconds']['mac']
 
     with open(args.config) as alert_file:
         profile_config = json.load(alert_file)
